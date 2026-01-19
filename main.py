@@ -5,8 +5,6 @@ weather.set_weather(27,"Sunny")
 weather.display_weather()
 
 
-# Display each customer from the CSV in this format: “Customer #53, Patricia Goodwin, vaughanchristy@lara.biz”
-1.
 import csv
 from customer import Customer
 
@@ -23,7 +21,7 @@ with open('customers.csv', 'r') as customers_file:
        customer_object = Customer(customer[0], customer[2], customer[3], customer[9])
        print(customer_object.description())
 
-2.
+
 import csv
 from customer import Customer
 
@@ -61,7 +59,6 @@ ax2.grid(True)
 plt.tight_layout()
 plt.savefig("output.png")
 plt.show()
-
 
 
 
