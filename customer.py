@@ -6,4 +6,4 @@ class Customer:
         self.email = email
 
     def description(self):
-        return f"Customer #{self.id}, {self.first_name}, {self.last_name}, {self.email}"
+        return f"Customer #{self.id}: {self.first_name} {self.last_name}, {self.email}"

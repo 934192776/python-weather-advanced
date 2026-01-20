@@ -22,18 +22,6 @@ with open('customers.csv', 'r') as customers_file:
        print(customer_object.description())
 
 
-import csv
-from customer import Customer
-
-with open('customers.csv', 'r') as customers_file:
-    customers = csv.reader(customers_file)
-    
-    for customer in customers:
-       customer_object = Customer(customer[0], customer[2], customer[3], customer[9])
-       print(customer_object.description())
-
-
-
 import matplotlib.pyplot as plt
 
 fig, (ax1, ax2) = plt.subplots(2,1)
@@ -50,14 +38,14 @@ ax1.set_xticks(years)
 ax1.grid(True)
 
 ax2.bar(years, co2_emissions, color='g', alpha=0.5)
-ax2.set_title("Global co2_emissions")
+ax2.set_title("Global CO2 Emissions")
 ax2.set_ylabel('co2_emissions (billions of metric tons)')
 ax2.set_xlabel("Year")
 ax2.set_xticks(years)
 ax2.grid(True)
 
 plt.tight_layout()
-plt.savefig("output.png")
+plt.savefig("output.png", dpi=300)
 plt.show()
 
 
@@ -95,8 +83,8 @@ def generate_population_dictionary_from_csv(filename):
 def generate_population_plots_from_dictionary(population_dictionary):
   
   for continent in population_dictionary:
-    years = population_per_continent[continent]['years']
-    population = population_per_continent[continent]['population']
+    years = population_dictionary[continent]['years']
+    population = population_dictionary[continent]['population']
     plt.plot(years, population, label=continent, marker="o", alpha=0.5)
 
   plt.title("Internet Population per continent")
