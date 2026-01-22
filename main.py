@@ -4,7 +4,6 @@ weather = Weather("Paris")
 weather.set_weather(27,"Sunny")
 weather.display_weather()
 
-
 import csv
 from customer import Customer
 
@@ -20,7 +19,6 @@ with open('customers.csv', 'r') as customers_file:
 
        customer_object = Customer(customer[0], customer[2], customer[3], customer[9])
        print(customer_object.description())
-
 
 import matplotlib.pyplot as plt
 
@@ -47,7 +45,6 @@ ax2.grid(True)
 plt.tight_layout()
 plt.savefig("output.png", dpi=300)
 plt.show()
-
 
 
 import csv
