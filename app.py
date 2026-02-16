@@ -1,11 +1,14 @@
 from flask import Flask
 app = Flask(__name__)
 
+import os
+
 @app.route('/')
 def home():
    return "Hello from my Python app on Render"
 if __name__== "__main__":
-   app.run(host='0.0.0.0',port=8000)
+   port = int(os.environ.get('PORT', 8000))
+   app.run(host='0.0.0.0',port=port)
 
 
 from weather import Weather
