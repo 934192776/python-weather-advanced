@@ -10,15 +10,15 @@ from customer import Customer
 with open('customers.csv', 'r') as customers_file:
     customers = csv.reader(customers_file)
     
-    for customer in customers:
-       id = customer[0]
-       first_name = customer[2]
-       last_name = customer[3]
-       email = customer[9]
-       print(f"Customer #{id}, {first_name} {last_name}, {email}")
+for customer in customers:
+    id = customer[0]
+    first_name = customer[2]
+    last_name = customer[3]
+    email = customer[9]
+    print(f"Customer #{id}, {first_name} {last_name}, {email}")
 
-       customer_object = Customer(customer[0], customer[2], customer[3], customer[9])
-       print(customer_object.description())
+    customer_object = Customer(customer[0], customer[2], customer[3], customer[9])
+    print(customer_object.description())
 
 import matplotlib.pyplot as plt
 
@@ -69,8 +69,8 @@ def generate_population_dictionary_from_csv(filename):
       year = int(line['year'])
       population = int(line['population'])
 
-      if continent not in output:
-        output[continent] = {'population': [], 'years': []}
+    if continent not in output:
+      output[continent] = {'population': [], 'years': []}
 
       output[continent]['population'].append(population)
       output[continent]['years'].append(year)
@@ -84,12 +84,12 @@ def generate_population_plots_from_dictionary(population_dictionary):
     population = population_dictionary[continent]['population']
     plt.plot(years, population, label=continent, marker="o", alpha=0.5)
 
-  plt.title("Internet Population per continent")
-  plt.xlabel("Year")
-  plt.ylabel("Internet users")
-  plt.grid(True)
-  plt.legend()
-  plt.show()
+    plt.title("Internet Population per continent")
+    plt.xlabel("Year")
+    plt.ylabel("Internet users")
+    plt.grid(True)
+    plt.legend()
+    plt.show()
   
 filename = 'data.csv'
 
