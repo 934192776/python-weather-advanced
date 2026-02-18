@@ -10,6 +10,7 @@ import matplotlib.pyplot as plt
 app = Flask(__name__)
 
 @app.route("/")
+
 def climate_chart():
 
     years = [2000, 2005, 2010, 2015, 2020]
@@ -36,7 +37,6 @@ def climate_chart():
     plt.close(fig)
 
     return send_file(img, mimetype="image/png")
-
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8000))
