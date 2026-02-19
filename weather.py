@@ -12,3 +12,4 @@ class Weather:
         print(f"city: {self.city}")
         print(f"Temperature: {self.temperature}")
         print(f"Condition: {self.condition}")
+        

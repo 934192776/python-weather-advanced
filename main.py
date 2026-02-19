@@ -46,7 +46,6 @@ plt.tight_layout()
 plt.savefig("output.png", dpi=300)
 plt.show()
 
-
 import csv
 import matplotlib.pyplot as plt
 
