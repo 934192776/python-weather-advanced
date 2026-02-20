@@ -7,3 +7,4 @@ class Customer:
 
     def description(self):
         return f"Customer #{self.id}: {self.first_name} {self.last_name}, {self.email}"
+    
